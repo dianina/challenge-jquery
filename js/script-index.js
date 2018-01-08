@@ -1,10 +1,31 @@
 $(document).ready( function(){
 
-
+/*
+* ETAPA 1: Esconder flecha en index y menu en recipe
+*/
 $().ready(function() {
   $('.js-back').hide();
   
 });
+
+/*
+* ETAPA 2: completar
+la función ​renderHighlightedRecipes ​ .
+*/
+ $(function() {
+       
+        $('p').text('NUEVAS RECETAS');
+      });
+
+/*
+* ETAPA 3:  Agregar p (NUEVAS RECETAS) en class News
+*/
+
+
+$("#unDiv").html(valorDiv + "<b> ... Nuevo</b>");
+console.log('Nuevas recetas ', index);
+
+
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
