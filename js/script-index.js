@@ -9,8 +9,7 @@ $().ready(function() {
 });
 
 /*
-* ETAPA 2: completar
-la función ​renderHighlightedRecipes ​ .
+* ETAPA 2: Asignar el texto "NUEVAS RECETAS" al párrafo.​ .
 */
  $(function() {
        
@@ -18,28 +17,30 @@ la función ​renderHighlightedRecipes ​ .
       });
 
 /*
-* ETAPA 3:  Agregar p (NUEVAS RECETAS) en class News
+* ETAPA 3: 
+*completar
+la función ​renderHighlightedRecipes
 */
 
 
-$("#unDiv").html(valorDiv + "<b> ... Nuevo</b>");
-console.log('Nuevas recetas ', index);
-
-
-
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
-	renderHighlightedRecipes(recipesArray);
+	/*renderHighlightedRecipes(recipesArray);*/
 
+});
 
+function renderHighlightedRecipes(recipesArray) {
+	for(var i= 0;i<recipesArray.length;i++){
+		if(recipesArray[i].highlighted==true){
+			renderRecipe(recipesArray[i]);
+		}
+	}
+}
 
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
-function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
-}
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
@@ -69,4 +70,4 @@ function renderActivity(recipe) {
 	
 }
 
-});
+
